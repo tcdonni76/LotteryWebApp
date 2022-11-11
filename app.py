@@ -18,6 +18,25 @@ db = SQLAlchemy(app)
 def index():
     return render_template('main/index.html')
 
+@app.errorhandler(400)
+def function_name(error):
+    return render_template('400.html'), 400
+
+@app.errorhandler(403)
+def function_name(error):
+    return render_template('403.html'), 403
+
+@app.errorhandler(404)
+def function_name(error):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def function_name(error):
+    return render_template('500.html'), 500
+
+@app.errorhandler(503)
+def function_name(error):
+    return render_template('503.html'), 503
 
 # BLUEPRINTS
 # import blueprints
