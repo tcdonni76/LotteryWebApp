@@ -1,5 +1,5 @@
 # IMPORTS
-from flask import Blueprint, render_template, flash, redirect, url_for
+from flask import Blueprint, render_template, flash, redirect, url_for, request
 
 from app import db
 from models import User
@@ -18,6 +18,8 @@ def register():
 
     # if request method is POST or form is valid
     if form.validate_on_submit():
+        print(request.form.get('email'))
+        print(request.form.get('password'))
         user = User.query.filter_by(email=form.email.data).first()
         # if this returns a user, then the email already exists in database
 
