@@ -5,3 +5,5 @@ flask_wtf
 WTForms
 wtforms
 email_validator
+bcrypt
+cryptography
