@@ -7,3 +7,5 @@ wtforms
 email_validator
 bcrypt
 cryptography
+python-dotenv
+pyotp
